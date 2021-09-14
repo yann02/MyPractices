@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyRipple</string>
+    <string name="gonna_image_background_activity">Gonna image background activity</string>
+    <string name="gonna_ripple_imageview_activity">Gonna ripple imageview activity</string>
+</resources>
