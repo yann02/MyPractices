@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!--  recording dialog  -->
+    <color name="common_yellow2_color">#fff6a3</color>
+    <color name="common_orange2_color">#f7be41</color>
+    <color name="common_purple10_color">#bdaef4</color>
+    <color name="common_blue14_color">#4586ce</color>
+    <color name="common_cyan2_color">#b6e8f8</color>
 </resources>

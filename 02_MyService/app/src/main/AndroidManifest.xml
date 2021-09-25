@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yyw.myservice">
-
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyService">
+        <activity android:name=".RecordViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".BoundServiceWithTimerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,6 +40,7 @@
 
         <service android:name=".BoundService" />
         <service android:name=".BoundTimerService" />
+        <service android:name=".BoundViewService" />
     </application>
 
 </manifest>
