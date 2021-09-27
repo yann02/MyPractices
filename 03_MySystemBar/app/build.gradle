@@ -4,26 +4,10 @@ plugins {
 }
 
 android {
-    signingConfigs{
-        debug {
-//            File strFile = new File('dosmono_p23I.keystore')
-            File strFile = new File('debug.keystore')
-            keyAlias 'androiddebugkey'
-
-//            File strFile = new File('kingjim.keystore')
-//            keyAlias 'kingjim'
-            storeFile file(strFile)
-//            keyAlias 'dosmono'
-
-            keyPassword 'android'
-            storePassword 'android'
-        }
-    }
-
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "com.yyw.myservice"
+        applicationId "com.hnsh.mysystembar"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -36,12 +20,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
-        }
-        debug {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
         }
     }
     compileOptions {
@@ -63,6 +41,4 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation 'pub.devrel:easypermissions:3.0.0'
-    implementation 'com.guolindev.permissionx:permissionx:1.5.1'
 }

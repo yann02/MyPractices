@@ -33,12 +33,17 @@ class RecordView : View {
     private val mRectWidth: Float = 20F
     private var mRectHeight: Float = 80F
     private val mRectInterval: Float = 20F
-    private val mRoundWidth: Float = 30F
-    private val mRoundHeight: Float = 40F
-    private val mRoundInterval: Float = 10F
+//    private val mRoundWidth: Float = 30F
+    private val mRoundWidth: Float = 22F
+//    private val mRoundHeight: Float = 40F
+    private val mRoundHeight: Float = 35F
+//    private val mRoundInterval: Float = 10F
+    private val mRoundInterval: Float = 5F
     private var mIndex: Int = 0
     private var mFactor: Float = 0.2F
     private var mIsLoading: Boolean = false
+
+    private var mAsc = true
 
     private var mHandler: MyHandler = MyHandler(this)
 
@@ -53,7 +58,8 @@ class RecordView : View {
             override fun handleMessage(msg: Message) {
                 super.handleMessage(msg)
                 mWeakReference?.get()?.invalidate()
-                sendEmptyMessageDelayed(0, 100)
+                sendEmptyMessageDelayed(0, 200)
+//                sendEmptyMessageDelayed(0, 130)
             }
         }
     }
@@ -125,9 +131,24 @@ class RecordView : View {
                 canvas?.drawRoundRect(rect, 40F, 40F, mPaint)
                 left += mRoundWidth + mRoundInterval
             }
-            if (++mIndex >= 5) {
-                mIndex = 0
+            if (mAsc) {
+                if (mIndex < 5) {
+                    mIndex++
+                } else {
+                    mAsc = false
+                    mIndex--
+                }
+            } else {
+                if (mIndex > 0) {
+                    mIndex--
+                } else {
+                    mAsc = true
+                    mIndex++
+                }
             }
+//            if (++mIndex >= 5) {
+//                mIndex = 0
+//            }
         }
     }
 

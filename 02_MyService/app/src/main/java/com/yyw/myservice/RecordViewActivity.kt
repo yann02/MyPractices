@@ -4,10 +4,10 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 class RecordViewActivity : AppCompatActivity() {
     private lateinit var mService: BoundViewService

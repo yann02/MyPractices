@@ -1,12 +1,15 @@
 package com.yyw.myservice
 
+import android.Manifest
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.PixelFormat
 import android.os.Binder
 import android.os.Build
 import android.os.IBinder
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -63,4 +66,6 @@ class BoundViewService : Service() {
             gravity = Gravity.BOTTOM
         }
     }
+
+
 }
