@@ -5,4 +5,6 @@
     <string name="start_print">Start Print</string>
     <string name="cancel">Cancel</string>
     <string name="show_recording_view">Show Recording View</string>
+    <string name="to_bind_service">To Bind Service</string>
+    <string name="unbind_the_service">Unbind The Service</string>
 </resources>

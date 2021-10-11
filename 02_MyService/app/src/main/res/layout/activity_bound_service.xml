@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="1"/>
+        tools:text="1" />
 
     <Button
         android:id="@+id/btn_get_random"
@@ -21,6 +21,22 @@
         android:text="@string/get_random"
         android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@+id/tv_random_text" />
+
+    <Button
+        android:id="@+id/btn_bind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/to_bind_service"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_get_random" />
+
+    <Button
+        android:id="@+id/btn_unBind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/unbind_the_service"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bind" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
