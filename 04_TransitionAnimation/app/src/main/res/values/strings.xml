@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">transition</string>
+    <string name="show_card_view">Show Card View</string>
+    <string name="intent_view">Intent View</string>
+    <string name="intent_fragment">Intent Fragment</string>
+    <string name="intent_container">Intent Fragment By Container</string>
+    <string name="next">Next</string>
+    <string name="forward">Forward</string>
+    <string name="backward">Backward</string>
+</resources>
