@@ -7,54 +7,73 @@
     tools:context=".ViewActivity">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_main"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/mcv_main"
         android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/holo_red_light"
-            android:id="@+id/cl_main">
+            android:background="@android:color/holo_red_light">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/mb_expand_card_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/mb_expand_card_view"
-                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/show_card_view"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:text="@string/show_card_view"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mb_fade_through"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fade_through"
+                app:layout_constraintTop_toBottomOf="@+id/mb_expand_card_view" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mb_fade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fade"
+                app:layout_constraintTop_toBottomOf="@+id/mb_fade_through" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mb_hidden_fade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hidden_fade"
+                app:layout_constraintTop_toBottomOf="@+id/mb_fade" />
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv_car"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
-                android:id="@+id/mcv_car"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginHorizontal="90dp"
                 android:elevation="3dp"
                 android:visibility="invisible"
-                app:cardBackgroundColor="@android:color/holo_orange_light">
+                app:cardBackgroundColor="@android:color/holo_orange_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:src="@mipmap/ic_launcher" />
 
             </com.google.android.material.card.MaterialCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

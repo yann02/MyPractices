@@ -7,19 +7,50 @@ import android.view.View
 import androidx.transition.Transition
 import androidx.transition.TransitionManager
 import com.google.android.material.transition.MaterialContainerTransform
+import com.google.android.material.transition.MaterialFade
+import com.google.android.material.transition.MaterialFadeThrough
 import com.hnsh.transition.databinding.ActivityViewBinding
 
 class ViewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityViewBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityViewBinding.inflate(layoutInflater)
+        binding = ActivityViewBinding.inflate(layoutInflater).apply {
+            mbFadeThrough.setOnClickListener {
+                showCardViewWithFadeThrough(it)
+            }
+            mbFade.setOnClickListener {
+                triggerCardViewWithFade(View.VISIBLE)
+            }
+            mbHiddenFade.setOnClickListener {
+                triggerCardViewWithFade(View.GONE)
+            }
+        }
         setContentView(binding.root)
         binding.mbExpandCardView.setOnClickListener {
             showCardView(it)
         }
         binding.mcvCar.setOnClickListener {
             hiddenCardView(it)
+        }
+    }
+
+    private fun triggerCardViewWithFade(visibility: Int) {
+        val fade = MaterialFade().apply {
+            duration = 2000
+        }
+        TransitionManager.beginDelayedTransition(binding.clMain, fade)
+        binding.mcvCar.visibility = visibility
+    }
+
+    private fun showCardViewWithFadeThrough(view: View?) {
+        val fadeThrough = MaterialFadeThrough().apply {
+            duration = 2000
+        }
+        TransitionManager.beginDelayedTransition(binding.clMain, fadeThrough)
+        binding.apply {
+            mbFadeThrough.visibility = View.GONE
+            mcvCar.visibility = View.VISIBLE
         }
     }
 

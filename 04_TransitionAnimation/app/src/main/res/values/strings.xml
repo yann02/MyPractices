@@ -7,4 +7,7 @@
     <string name="next">Next</string>
     <string name="forward">Forward</string>
     <string name="backward">Backward</string>
+    <string name="fade_through">Fade Through</string>
+    <string name="fade">Fade</string>
+    <string name="hidden_fade">Fade For Hidden</string>
 </resources>
